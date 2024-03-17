@@ -13,4 +13,6 @@ This script, originally intended to just be a webscraping test project, might ev
 ## Requirements
 pip install bs4
 
+THE ACTUAL SCRIPT IS IN THE 'REAL SITE' FOLDER!
+
 
