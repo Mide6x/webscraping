@@ -21,8 +21,8 @@ def job_details():
         date_ptsd = job.find('span', class_='sim-posted').span.text
 
         if 'few' in date_ptsd:
-            job_title = job.find('header', class_='clearfix').h2.text.replace(' ', '')
-            company_name = job.find('h3', class_='joblist-comp-name').text.replace(' ', '')
+            job_title = job.find('header', class_='clearfix').h2.text.replace(' ', ' ')
+            company_name = job.find('h3', class_='joblist-comp-name').text.replace(' ', ' ')
             skill_req = job.find('span', class_='srp-skills').text.replace(' ', '')
             link_tag = job.find('a')
             link = link_tag.get('href')
@@ -34,7 +34,7 @@ def job_details():
                 'Link to Apply': link.strip(),  
                 }
             data.append(full_detail) 
-            
+
     # Convert data to JSON with proper indentation and newlines
     json_data = json.dumps(data, indent=4)
 
